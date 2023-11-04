@@ -4,6 +4,7 @@
 vsc-extension-quickstart.md
 *
 !*.*
+!LICENSE
 node_modules
 *.vsix
 *.tdb
