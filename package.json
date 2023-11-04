@@ -1,7 +1,7 @@
 {
   "name": "tdb-highlighter",
   "displayName": "TDB Highlighter",
-  "publisher": "Adam M. Krajewski",
+  "publisher": "AMKrajewski",
   "description": "Provides syntax highlighting for the Thermodynamic DataBase (TDB) files used in the CALPHAD community to describe thermodynamic models of properties of materials.",
   "version": "1.0.0",
   "repository": {
