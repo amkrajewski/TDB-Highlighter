@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "tdb-highlighter" extension will be documented in this file.
+## 1.0.1/2
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Minor fixes of typos, grammar, and style.
 
-## [Unreleased]
+## 1.0.0
 
-- Initial release
+- The initial release of TDB Highlighter.
