@@ -1,10 +1,6 @@
+node_modules
+*.tdb
 .vscode/**
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
-*
-!*.*
-!LICENSE
-node_modules
-*.vsix
-*.tdb
