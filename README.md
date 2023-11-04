@@ -1,65 +1,54 @@
-# tdb-highlighter README
+# TDB Highlighter
 
-This is the README for your extension "tdb-highlighter". After writing up a brief description, we recommend including the following sections.
+This VS Code "language" extension, developed by Adam M. Krajewski in [Prof. Zi-Kui Liu's group](https://phaseslab.org) at The Pennsylvania State University, provides syntax highlighting for the Thermodynamic DataBase (TDB) files used in the [CALPHAD community](https://calphad.org) to describe thermodynamic properties of materials. You can find them alongside publications in the [CALPHAD Journal](https://www.sciencedirect.com/journal/calphad) published by Elsevier, or in the [Thermodynamic DataBase DataBase (TDBDB)](https://avdwgroup.engin.brown.edu) maintained by Prof. van de Walle group at Brown University.
+
+**Most critically, if something is highlighted differently then you expect, you know something may be wrong with it :).** E.g., in `+1.95033E-07*T**3-.O17983376*T**2+78.5244752*T*LN(T)-722.59722*T+229382.886-93813648*T**(-1); 3290 Y` one of the numbers is not a number and will be red. Guess which one...? Likewise, that `LAVE_C36` phase will stand out.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Phases, species, elements** and other critical elements of the database, are formatted with highly-visible fonts and colors speeding up the process of navigating, reading, and editing the files tremendously.
 
-For example if there is an image subfolder under your extension project workspace:
+- **References, notes, comments, optionals,** and otherwise less critical elements of the database, are formatted with subtle formatting to reduce visual clutter.
 
-\!\[feature X\]\(images/feature-x.png\)
+- **Temperature (T) and its powers/logs/exps** in equations are formatted with brigh red colors to immediately pinpoint where given part of the polynomial is located.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- **Function names** are exposed within the equations to make them stand out from numbers and easier to read.
 
-## Requirements
+- A number of **TDB syntax** keywords are specifically highlighted in neutral colors matching their functions to make them stand out in case of typos.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+***Giving raise to the following neat-looking TDB header and function definitions:***
 
-## Extension Settings
+<p align="center"><img src="assets/Fig1.png" alt="Example of TDB Highlighter in action" width="480"><p>
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+***and main body with thermodynamic model parameters:***
 
-For example:
+<p align="center"><img src="assets/Fig2.png" alt="Example of TDB Highlighter in action" width="500"><p>
 
-This extension contributes the following settings:
+***Oh! And it works in the dark mode too!***
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+<p align="center"><img src="assets/Fig3.png" alt="Example of TDB Highlighter in action" width="470"><p>
+
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+***No known _errors_ at this time!*** But in some cases listed below the highlighting may not be perfect due to arbitrary nature of the TDB files.
+
+### User-Defined Phases
+The phase highlighting is not perfect in a way that it will not cover all the cases since names are arbitrary and can be anything. They are currently covered by this regex (where `\\w*` can be interpreted as "any characters remaining"):
+
+    "\\b(ELECTRON_GAS|VACUUM|GAS|LIQUID|FCC\\w*|BCC\\w*|HCP\\w*|DHCP|CBCC\\w*|DOUBLE\\w*|DIA\\w*|DIAMOND\\w*|BCT\\w*|RHO\\w*|ORTHORHOMBIC\\w*|TETRAGONAL\\w*|LAVES\\w*|CEMENTITE\\w*|SIGMA\\w*|MU\\w*|LAMBDA\\w*|ETA\\w*|BETA\\w*|GRAPHITE\\w*|THETA\\w*|GAMMA\\w*|C14|C15|C36|ORT|AMORPHOUS\\w*|\\w*AMORPHOUS|\\w*ALPHA|\\w*PRIME|\\w*BETA|\\w*GAMMA|\\w*DELTA|\\w*EPSILON|\\w*ETA|\\w*MU|\\w*SIGMA|\\w*TAU|\\w*D019|\\w*D83|\\w*A\\d\\d)\\b"
+
+if you want to add something to it, please do so in the `tdb.tmLanguage.json` file, edit the regex string above to add your case, and **please open a pull request** in this repository.
+
+### Names of Species
+
+Similar to phases, names of species can be arbitrarily set by users, but in this case the number is so large that it is not feasible to cover them all _a priori_. If you wish to highlight your species, please add them to your **local** phases list.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Initial release of TDB Highlighter.
 
-### 1.0.1
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+***Enjoy!***
