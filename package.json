@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "icon": "assets/Logo.png",
+  "pricing": "Free",
   "repository": {
     "type": "git",
     "url": "https://github.com/amkrajewski/tdb-highlighter"
