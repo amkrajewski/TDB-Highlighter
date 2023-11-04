@@ -4,17 +4,17 @@ _You didn't know you can't do CALPHAD without it._
 
 This VS Code Language Extension, developed by Adam M. Krajewski in [Prof. Zi-Kui Liu's group](https://phaseslab.org) at The Pennsylvania State University, provides syntax highlighting for the Thermodynamic DataBase (TDB) files used in the [CALPHAD community](https://calphad.org) to describe thermodynamic properties of materials. You can find them alongside publications in the [CALPHAD Journal](https://www.sciencedirect.com/journal/calphad) published by Elsevier, or in the [Thermodynamic DataBase DataBase (TDBDB)](https://avdwgroup.engin.brown.edu) maintained by Prof. van de Walle group at Brown University.
 
-**Most critically, if something is highlighted differently then you expect, you know something may be wrong with it :).** E.g., in `+1.95033E-07*T**3-.01798O876*T**2+78.5244752*T*LN(T)-722.59722*T+229382.886-93813648*T**(-1); 3290 Y` one of the numbers is not a number and will be red. Guess which one...? Likewise, that `LAVE_C36` phase will stand out.
+**Most critically, if something is highlighted differently than you expect, you know something may be wrong with it :).** E.g., in `+1.95033E-07*T**3-.01798O876*T**2+78.5244752*T*LN(T)-722.59722*T+229382.886-93813648*T**(-1); 3290 Y` one of the numbers is not a number and will be red. Guess which one...? Likewise, that `LAVE_C36` phase you just typed will stand out.
 
 ## Features
 
-- **Phases, species, elements** and other critical elements of the database, are formatted with highly-visible fonts and colors speeding up the process of navigating, reading, and editing the files tremendously.
+- **Phases, species, elements** and other critical elements of the database, are formatted with highly visible fonts and colors, speeding up the process of navigating, reading, and editing the files tremendously.
 
-- **References, notes, comments, optionals,** and otherwise less critical elements of the database, are formatted with subtle formatting to reduce visual clutter.
+- **References, notes, comments, optionals,** and otherwise less critical parts of the database, are formatted with subtle formatting to reduce visual clutter.
 
-- **Temperature (T) and its powers/logs/exps** in equations are formatted with brigh red colors to immediately pinpoint where given part of the polynomial is located.
+- **Temperature (T) and its powers/logs/exps** in equations are formatted with bright red colors to immediately pinpoint where a given part of the polynomial is located.
 
-- **Function names** are exposed within the equations to make them stand out from numbers and easier to read.
+- **Function names** are exposed within the equations to make them stand out from numbers and be easier to read.
 
 - A number of **TDB syntax** keywords are specifically highlighted in neutral colors matching their functions to make them stand out in case of typos.
 
@@ -26,14 +26,14 @@ This VS Code Language Extension, developed by Adam M. Krajewski in [Prof. Zi-Kui
 
 <p align="center"><img src="assets/Fig2.png" alt="Example of TDB Highlighter in action" width="500"><p>
 
-***Oh! And it works in the dark mode too!***
+***Oh! And it works in the dark mode, too!***
 
 <p align="center"><img src="assets/Fig3.png" alt="Example of TDB Highlighter in action" width="470"><p>
 
 
 ## Known Issues
 
-***No known _errors_ at this time!*** But in some cases listed below the highlighting may not be perfect due to arbitrary nature of the TDB files.
+***No known _errors_ at this time!*** But in some cases listed below, the highlighting may not be perfect due to the arbitrary nature of the TDB files.
 
 ### User-Defined Phases
 The phase highlighting is not perfect in a way that it will not cover all the cases since names are arbitrary and can be anything. They are currently covered by this regex (where `\\w*` can be interpreted as "any characters remaining"):
@@ -44,13 +44,13 @@ if you want to add something to it, please do so in the `tdb.tmLanguage.json` fi
 
 ### Names of Species
 
-Similar to phases, names of species can be arbitrarily set by users, but in this case the number is so large that it is not feasible to cover them all _a priori_. If you wish to highlight your species, please add them to your **local** phases list.
+Similar to phases, species names can be arbitrarily set by users, but in this case, the number is so large that it is not feasible to cover them all _a priori_. If you wish to highlight your species, please add them to your **local** phases list.
 
 ## Release Notes
 
 ### 1.0.0
 
-Initial release of TDB Highlighter.
+The initial release of TDB Highlighter.
 
 
 ***Enjoy!***
