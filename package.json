@@ -1,0 +1,25 @@
+{
+  "name": "tdb-highlighter",
+  "displayName": "TDB Highlighter",
+  "description": "",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "tdb",
+      "aliases": ["ThermodynamicDataBase", "TDB"],
+      "extensions": [".tdb",".TDB"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "tdb",
+      "scopeName": "source.tdb",
+      "path": "./syntaxes/tdb.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,452 @@
+{
+	"version": "1.0.0",
+	"name": "TDB",
+	"scopeName": "source.tdb",
+	"patterns": [
+		{
+			"comment": "--> Please contribute here!!! <-- All PHASES to highlight exactly or when present (appended with \\w*) separated by the | operator.",
+			"match": "\\b(ELECTRON_GAS|VACUUM|GAS|LIQUID|FCC\\w*|BCC\\w*|HCP\\w*|DHCP|CBCC\\w*|DOUBLE\\w*|DIA\\w*|DIAMOND\\w*|BCT\\w*|RHO\\w*|ORTHORHOMBIC\\w*|TETRAGONAL\\w*|LAVES\\w*|CEMENTITE\\w*|SIGMA\\w*|MU\\w*|LAMBDA\\w*|ETA\\w*|BETA\\w*|GRAPHITE\\w*|THETA\\w*|GAMMA\\w*|C14|C15|C36|ORT|AMORPHOUS\\w*|\\w*AMORPHOUS|\\w*ALPHA|\\w*PRIME|\\w*BETA|\\w*GAMMA|\\w*DELTA|\\w*EPSILON|\\w*ETA|\\w*MU|\\w*SIGMA|\\w*TAU|\\w*D019|\\w*D83|\\w*A\\d\\d)\\b",
+			"name": "markup.heading"
+		},
+		{
+			"match": "\\b(ELEMENT|SPECIES|MAGNETIC)\\b",
+			"name": "constant.language"
+		},
+		{
+			"comment": "Highlighter for TDB comments.",
+			"match": "\\$.*$",
+			"name": "support.type"
+		},
+		{
+			"comment": "T (temperature) with negative exponent",
+			"match": "T\\*\\*\\(-\\d+",
+			"name": "invalid"
+		},
+		{
+			"comment": "T (temperature) with positive exponent",
+			"match": "T\\*\\*\\d+",
+			"name": "invalid"
+		},
+		{
+			"comment": "T (temperature) alone",
+			"match": "\\bT\\b",
+			"name": "invalid"
+		},
+		{
+			"comment": "TDB/FORTRAN math operators around temperature.",
+			"match": "\\b(LN|LOG|EXP)\\b",
+			"name": "invalid"
+		},
+		{
+			"match": "\\b(PHASE|CONSTITUENT|CONST)\\b",
+			"name": "constant.regexp"
+		},
+		{
+			"comment": "Function and the next word following it.",
+			"match": "\\b(FUNCTION\\s+\\w+|FUNCT\\s+\\w+)\\b",
+			"name": "keyword.control"
+		},
+		{
+			"comment": "Type definition and the next symbol or word following it.",
+			"match": "\\bTYPE_DEFINITION\\s+.|TYPE-DEFINITION\\s+.|TYPE_DEF\\s+.|TYPE-DEF\\s+.|LIST_OF_REFERENCES|NUMBER|SOURCE",
+			"name": "token.debug-token"
+		},
+		{
+			"comment": "Documented flags and the next sybmol or word following them.",
+			"match": "\\bGES\\s+\\w+|SEQ\\s+\\w+|RND#\\s+\\w+|GES\\s+\\w+|POLY3\\s+\\w+|TDB\\s+\\w+|GES\\s+.|SEQ\\s+.|RND#\\s+.|GES\\s+.|POLY3\\s+.|TDB\\s+.",
+			"name": "token.debug-token"
+		},
+		{
+			"comment": "Defaults and the next word following them.",
+			"match": "\\bDEFINE_SYSTEM_DEFAULT\\s+\\w+|DEFAULT_COMMAND\\s+\\w+|DEFAULT-COM\\s+\\w+",
+			"name": "token.debug-token"
+		},
+		{
+			"comment": "PARAMETER or FUNCTION name in equations followed by the # symbol (optional but common).",
+			"match": "[A-Z]+#",
+			"name": "keyword.control"
+		},
+		{
+			"comment": "Gas constant R.",
+			"match": "\\bR\\b",
+			"name": "keyword.control"
+		},
+		{
+			"comment": "PARAMETER variations and the word following them.",
+			"match": "\\b(PARAMETER\\s+\\w+|PARAM\\s+\\w+|PARA\\s+\\w+|PAR\\s+\\w+)\\b",
+			"name": "variable.other.constant"
+		},
+		{
+			"comment": "All chemcial elements",
+			"match": "\\b(VA|H|HE|LI|BE|B|C|O|F|NE|NA|MG|AL|SI|P|S|CL|AR|K|CA|SC|TI|V|CR|MN|FE|CO|NI|CU|ZN|GA|GE|AS|SE|BR|KR|RB|SR|ZR|NB|MO|TC|RU|RH|PD|AG|CD|IN|SN|SB|TE|I|XE|CS|BA|LA|CE|PR|ND|PM|SM|EU|GD|TB|DY|HO|ER|TM|YB|LU|HF|TA|W|RE|OS|IR|PT|AU|HG|TL|PB|BI|TH|PA|U|NP|PU|AM|CM|BK|CF|ES|FM|MD|NO|LR|RF|DB|SG|BH|HS|MT|DS|RG|CN|NH|FL|MC|LV|TS|OG)\\b",
+			"name": "markup.bold"
+		},
+		{
+			"comment": "Highlighting of Y and N, but prevented (1) after numbers or (2) before ! or REF.",
+			"match": "\\b(?<!\\d\\s+)\\bN\\b(?!(\\s+\\!|\\s+REF))|(?<!\\d\\s+)\\bY\\b(?!(\\s+\\!|\\s+REF))",
+			"name": "markup.bold"
+		},
+		{
+			"comment": "Highlights N (which is optional in this context) only after numbers or before ! or REF.",
+			"match": "(?<=\\d\\s+)\\bN\\b|\\bN\\b(?=\\s+\\!|\\s+REF)",
+			"name": "string.quoted.docstring"
+		},
+		{
+			"comment": "Highlights Y (which is optional in this context) only after numbers or before ! or REF.",
+			"match": "(?<=\\d\\s+)\\bY\\b|\\bY\\b(?=\\s+\\!|\\s+REF)",
+			"name": "keyword"
+		},
+		{
+			"comment": "Highlights REF and the rest of its word.",
+			"match": "\\bREF\\w+\\b",
+			"name": "string.quoted.docstring"
+		},
+		{
+			"comment": "Highlights !.",
+			"match": "\\!",
+			"name": "string.quoted.docstring"
+		},
+		{
+			"comment": "Numeric highlighting based on the Go language grammar for numerics.",
+			"match": "(?<!\\w)\\.?\\d(?:(?:[0-9a-zA-Z_\\.])|(?<=[eEpP])[+-])*",
+			"captures": {
+				"0": {
+					"patterns": [
+						{
+							"begin": "(?=.)",
+							"end": "(?:\\n|$)",
+							"patterns": [
+								{
+									"match": "(?:(?:(?:(?:(?:\\G(?=[0-9.])(?!0[xXbBoO])([0-9](?:[0-9]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)((?:(?<=[0-9])\\.|\\.(?=[0-9])))([0-9](?:[0-9]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)?(?:(?<!_)([eE])(\\+?)(\\-?)((?:[0-9](?:[0-9]|(?:(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)))?(i(?!\\w))?(?:\\n|$)|\\G(?=[0-9.])(?!0[xXbBoO])([0-9](?:[0-9]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)(?<!_)([eE])(\\+?)(\\-?)((?:[0-9](?:[0-9]|(?:(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*))(i(?!\\w))?(?:\\n|$))|\\G((?:(?<=[0-9])\\.|\\.(?=[0-9])))([0-9](?:[0-9]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)(?:(?<!_)([eE])(\\+?)(\\-?)((?:[0-9](?:[0-9]|(?:(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)))?(i(?!\\w))?(?:\\n|$))|(\\G0[xX])_?([0-9a-fA-F](?:[0-9a-fA-F]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)((?:(?<=[0-9a-fA-F])\\.|\\.(?=[0-9a-fA-F])))([0-9a-fA-F](?:[0-9a-fA-F]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)?(?<!_)([pP])(\\+?)(\\-?)((?:[0-9](?:[0-9]|(?:(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*))(i(?!\\w))?(?:\\n|$))|(\\G0[xX])_?([0-9a-fA-F](?:[0-9a-fA-F]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)(?<!_)([pP])(\\+?)(\\-?)((?:[0-9](?:[0-9]|(?:(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*))(i(?!\\w))?(?:\\n|$))|(\\G0[xX])((?:(?<=[0-9a-fA-F])\\.|\\.(?=[0-9a-fA-F])))([0-9a-fA-F](?:[0-9a-fA-F]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)(?<!_)([pP])(\\+?)(\\-?)((?:[0-9](?:[0-9]|(?:(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*))(i(?!\\w))?(?:\\n|$))",
+									"captures": {
+										"1": {
+											"name": "constant.numeric.decimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"2": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"3": {
+											"name": "constant.numeric.decimal.point.go"
+										},
+										"4": {
+											"name": "constant.numeric.decimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"5": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"6": {
+											"name": "keyword.other.unit.exponent.decimal.go"
+										},
+										"7": {
+											"name": "keyword.operator.plus.exponent.decimal.go"
+										},
+										"8": {
+											"name": "keyword.operator.minus.exponent.decimal.go"
+										},
+										"9": {
+											"name": "constant.numeric.exponent.decimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"10": {
+											"name": "keyword.other.unit.imaginary.go"
+										},
+										"11": {
+											"name": "constant.numeric.decimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"12": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"13": {
+											"name": "keyword.other.unit.exponent.decimal.go"
+										},
+										"14": {
+											"name": "keyword.operator.plus.exponent.decimal.go"
+										},
+										"15": {
+											"name": "keyword.operator.minus.exponent.decimal.go"
+										},
+										"16": {
+											"name": "constant.numeric.exponent.decimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"17": {
+											"name": "keyword.other.unit.imaginary.go"
+										},
+										"18": {
+											"name": "constant.numeric.decimal.point.go"
+										},
+										"19": {
+											"name": "constant.numeric.decimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"20": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"21": {
+											"name": "keyword.other.unit.exponent.decimal.go"
+										},
+										"22": {
+											"name": "keyword.operator.plus.exponent.decimal.go"
+										},
+										"23": {
+											"name": "keyword.operator.minus.exponent.decimal.go"
+										},
+										"24": {
+											"name": "constant.numeric.exponent.decimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"25": {
+											"name": "keyword.other.unit.imaginary.go"
+										},
+										"26": {
+											"name": "keyword.other.unit.hexadecimal.go"
+										},
+										"27": {
+											"name": "constant.numeric.hexadecimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"28": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"29": {
+											"name": "constant.numeric.hexadecimal.go"
+										},
+										"30": {
+											"name": "constant.numeric.hexadecimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"31": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"32": {
+											"name": "keyword.other.unit.exponent.hexadecimal.go"
+										},
+										"33": {
+											"name": "keyword.operator.plus.exponent.hexadecimal.go"
+										},
+										"34": {
+											"name": "keyword.operator.minus.exponent.hexadecimal.go"
+										},
+										"35": {
+											"name": "constant.numeric.exponent.hexadecimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"36": {
+											"name": "keyword.other.unit.imaginary.go"
+										},
+										"37": {
+											"name": "keyword.other.unit.hexadecimal.go"
+										},
+										"38": {
+											"name": "constant.numeric.hexadecimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"39": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"40": {
+											"name": "keyword.other.unit.exponent.hexadecimal.go"
+										},
+										"41": {
+											"name": "keyword.operator.plus.exponent.hexadecimal.go"
+										},
+										"42": {
+											"name": "keyword.operator.minus.exponent.hexadecimal.go"
+										},
+										"43": {
+											"name": "constant.numeric.exponent.hexadecimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"44": {
+											"name": "keyword.other.unit.imaginary.go"
+										},
+										"45": {
+											"name": "keyword.other.unit.hexadecimal.go"
+										},
+										"46": {
+											"name": "constant.numeric.hexadecimal.go"
+										},
+										"47": {
+											"name": "constant.numeric.hexadecimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"48": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"49": {
+											"name": "keyword.other.unit.exponent.hexadecimal.go"
+										},
+										"50": {
+											"name": "keyword.operator.plus.exponent.hexadecimal.go"
+										},
+										"51": {
+											"name": "keyword.operator.minus.exponent.hexadecimal.go"
+										},
+										"52": {
+											"name": "constant.numeric.exponent.hexadecimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"53": {
+											"name": "keyword.other.unit.imaginary.go"
+										}
+									}
+								},
+								{
+									"match": "(?:(?:(?:\\G(?=[0-9.])(?!0[xXbBoO])([0-9](?:[0-9]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)(i(?!\\w))?(?:\\n|$)|(\\G0[bB])_?([01](?:[01]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)(i(?!\\w))?(?:\\n|$))|(\\G0[oO]?)_?((?:[0-7]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))+)(i(?!\\w))?(?:\\n|$))|(\\G0[xX])_?([0-9a-fA-F](?:[0-9a-fA-F]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)(i(?!\\w))?(?:\\n|$))",
+									"captures": {
+										"1": {
+											"name": "constant.numeric.decimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"2": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"3": {
+											"name": "keyword.other.unit.imaginary.go"
+										},
+										"4": {
+											"name": "keyword.other.unit.binary.go"
+										},
+										"5": {
+											"name": "constant.numeric.binary.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"6": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"7": {
+											"name": "keyword.other.unit.imaginary.go"
+										},
+										"8": {
+											"name": "keyword.other.unit.octal.go"
+										},
+										"9": {
+											"name": "constant.numeric.octal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"10": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"11": {
+											"name": "keyword.other.unit.imaginary.go"
+										},
+										"12": {
+											"name": "keyword.other.unit.hexadecimal.go"
+										},
+										"13": {
+											"name": "constant.numeric.hexadecimal.go",
+											"patterns": [
+												{
+													"match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
+													"name": "punctuation.separator.constant.numeric.go"
+												}
+											]
+										},
+										"14": {
+											"name": "punctuation.separator.constant.numeric.go"
+										},
+										"15": {
+											"name": "keyword.other.unit.imaginary.go"
+										}
+									}
+								},
+								{
+									"match": "(?:(?:[0-9a-zA-Z_\\.])|(?<=[eEpP])[+-])+",
+									"name": "invalid.illegal.constant.numeric.go"
+								}
+							]
+						}
+					]
+				}
+			}
+		}
+	]
+}
