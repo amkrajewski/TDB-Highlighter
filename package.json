@@ -3,6 +3,10 @@
   "displayName": "TDB Highlighter",
   "description": "",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amkrajewski/tdb-highlighter"
+  },
   "engines": {
     "vscode": "^1.84.0"
   },
