@@ -1,5 +1,8 @@
 # TDB Highlighter
 
+[![Badge for version for Visual Studio Code extension](https://vsmarketplacebadges.dev/version/amkrajewski.tdb-highlighter.png?color=blue&style=?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=amkrajewski.tdb-highlighter&wt.mc_id=vscode-versionlens-gitlab)
+[![The ISC license](https://img.shields.io/badge/license-MIT-orange.png?color=blue&style=flat-square)](http://opensource.org/licenses/MIT)
+
 _You didn't know you can't do CALPHAD without it._
 
 This VS Code Language Extension, developed by Adam M. Krajewski in [Prof. Zi-Kui Liu's group](https://phaseslab.org) at The Pennsylvania State University, provides syntax highlighting for the Thermodynamic DataBase (TDB) files used in the [CALPHAD community](https://calphad.org) to describe thermodynamic properties of materials. You can find them alongside publications in the [CALPHAD Journal](https://www.sciencedirect.com/journal/calphad) published by Elsevier, or in the [Thermodynamic DataBase DataBase (TDBDB)](https://avdwgroup.engin.brown.edu) maintained by Prof. van de Walle group at Brown University.
