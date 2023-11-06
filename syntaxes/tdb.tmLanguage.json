@@ -147,13 +147,13 @@
 											"name": "punctuation.separator.constant.numeric.go"
 										},
 										"6": {
-											"name": "keyword.other.unit.exponent.decimal.go"
+											"name": "constant.numeric.decimal.go"
 										},
 										"7": {
-											"name": "keyword.operator.plus.exponent.decimal.go"
+											"name": "constant.numeric.decimal.go"
 										},
 										"8": {
-											"name": "keyword.operator.minus.exponent.decimal.go"
+											"name": "constant.numeric.decimal.go"
 										},
 										"9": {
 											"name": "constant.numeric.exponent.decimal.go",
