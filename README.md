@@ -34,12 +34,12 @@ This VS Code Language Extension, developed by Adam M. Krajewski in [Prof. Zi-Kui
 <p align="center"><img src="assets/Fig3.png" alt="Example of TDB Highlighter in action" width="470"><p>
 
 
-## Known Issues
+## FAQ
 
 ***No known _errors_ at this time!*** But in some cases listed below, the highlighting may not be perfect due to the arbitrary nature of the TDB files.
 
 ### User-Defined Phases
-The phase highlighting is not perfect in a way that it will not cover all the cases since names are arbitrary and can be anything. They are currently covered by this regex (where `\\w*` can be interpreted as "any characters remaining"):
+The phase highlighting is not perfect in a way that it will not cover all the cases since names are arbitrary and can be anything. They are currently (V1.0.0) covered by this regex (where `\\w*` can be interpreted as "any characters remaining"):
 
     "\\b(ELECTRON_GAS|VACUUM|GAS|LIQUID|FCC\\w*|BCC\\w*|HCP\\w*|DHCP|CBCC\\w*|DOUBLE\\w*|DIA\\w*|DIAMOND\\w*|BCT\\w*|RHO\\w*|ORTHORHOMBIC\\w*|TETRAGONAL\\w*|LAVES\\w*|CEMENTITE\\w*|SIGMA\\w*|MU\\w*|LAMBDA\\w*|ETA\\w*|BETA\\w*|GRAPHITE\\w*|THETA\\w*|GAMMA\\w*|C14|C15|C36|ORT|AMORPHOUS\\w*|\\w*AMORPHOUS|\\w*ALPHA|\\w*PRIME|\\w*BETA|\\w*GAMMA|\\w*DELTA|\\w*EPSILON|\\w*ETA|\\w*MU|\\w*SIGMA|\\w*TAU|\\w*D019|\\w*D83|\\w*A\\d\\d)\\b"
 
