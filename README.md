@@ -37,6 +37,7 @@ This VS Code Language Extension, developed by [Adam M. Krajewski](https://github
 
 <p align="center"><img src="assets/Fig3.png" alt="Example of TDB Highlighter in action" width="470"><p>
 
+We have tested that it works very well with a number of themes, including: **(VSCode Default) Light Modern**, 
 
 ## FAQ
 
