@@ -2,6 +2,10 @@
 
 [![Badge for version for Visual Studio Code extension](https://vsmarketplacebadges.dev/version/amkrajewski.tdb-highlighter.png?color=blue&style=?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=amkrajewski.tdb-highlighter&wt.mc_id=vscode-versionlens-gitlab)
 [![The ISC license](https://img.shields.io/badge/license-MIT-orange.png?color=blue&style=flat-square)](http://opensource.org/licenses/MIT)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/amkrajewski.tdb-highlighter.png?color=blue&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=amkrajewski.tdb-highlighter)
+[![Rating](https://vsmarketplacebadges.dev/rating-star/amkrajewski.tdb-highlighter.png?color=blue&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=amkrajewski.tdb-highlighter)
+
+
 
 _You didn't know you can't do CALPHAD without it._
 
