@@ -74,7 +74,7 @@
 		{
 			"comment": "PARAMETER variations and the word following them.",
 			"match": "\\b(PARAMETER\\s+\\w+|PARAM\\s+\\w+|PARA\\s+\\w+|PAR\\s+\\w+)\\b",
-			"name": "variable.other.constant"
+			"name": "token.info-token"
 		},
 		{
 			"comment": "All chemcial elements",
