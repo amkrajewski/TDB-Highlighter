@@ -5,7 +5,7 @@
 	"patterns": [
 		{
 			"comment": "--> Please contribute here!!! <-- All PHASES to highlight exactly or when present (appended with \\w*) separated by the | operator.",
-			"match": "\\b(ELECTRON_GAS|VACUUM|GAS|LIQUID|FCC\\w*|BCC\\w*|HCP\\w*|DHCP|CBCC\\w*|DELTA|DOUBLE\\w*|DIA\\w*|DIAMOND\\w*|BCT\\w*|RHO\\w*|ORTHORHOMBIC\\w*|TETRAGONAL\\w*|LAVES\\w*|CEMENTITE\\w*|SIGMA\\w*|MU\\w*|LAMBDA\\w*|ETA\\w*|BETA\\w*|GRAPHITE\\w*|THETA\\w*|GAMMA\\w*|C14|C15|C36|ORT|AMORPHOUS\\w*|\\w*_AMORPHOUS|\\w*_FCC|\\w*_BCC|\\w*_HCP|\\w*_BCT|\\w*_ALPHA|\\w*_PRIME|\\w*_BETA|\\w*_GAMMA|\\w*_DELTA|\\w*_EPSILON|\\w*_ETA|\\w*MU|\\w*_SIGMA|\\w*_TAU|\\w*_D019|\\w*_D83|\\w*_A\\d\\d)\\b",
+			"match": "\\b(ELECTRON_GAS|VACUUM|GAS|LIQUID|FCC\\w*|BCC\\w*|HCP\\w*|DHCP|CBCC\\w*|DELTA|DOUBLE\\w*|DIA\\w*|DIAMOND\\w*|BCT\\w*|RHO\\w*|ORTHORHOMBIC\\w*|TETRAGONAL\\w*|LAVES\\w*|CEMENTITE\\w*|SIGMA\\w*|MU\\w*|LAMBDA\\w*|ETA\\w*|BETA\\w*|GRAPHITE\\w*|THETA\\w*|GAMMA\\w*|C14|C15|C36|ORT|R_PHASE|AMORPHOUS\\w*|\\w*_AMORPHOUS|\\w*_FCC|\\w*_BCC|\\w*_HCP|\\w*_BCT|\\w*_ALPHA|\\w*_PRIME|\\w*_BETA|\\w*_GAMMA|\\w*_DELTA|\\w*_EPSILON|\\w*_ETA|\\w*MU|\\w*_SIGMA|\\w*_TAU|\\w*_D019|\\w*_D83|\\w*_A\\d\\d)\\b",
 			"name": "markup.heading"
 		},
 		{
