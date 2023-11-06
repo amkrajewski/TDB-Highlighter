@@ -49,7 +49,16 @@ if you want to add something to it, please do so in the `tdb.tmLanguage.json` fi
 
 Similar to phases, species names can be arbitrarily set by users, but in this case, the number is so large that it is not feasible to cover them all _a priori_. If you wish to highlight your species, please add them to your **local** phases list.
 
-## Release Notes
+### Line Lenght Limit
+
+Some software, like the very popular [Thermo-Calc](https://www.thermocalc.com), has a limit on the length of a line in the TDB file, which is 80 characters following the legacy of [Fortran standard](https://en.wikipedia.org/wiki/Fortran_95_language_features#Source_code_formatting). We do not enforce this limit in the syntax highlighting, as not all software has this limit (e.g. [pycalphad](https://pycalphad.org)).
+
+However, if you wish to enforce this limit, you can quickly do so by adding the following to your user `settings.json` file in VS Code:
+
+    "editor.rulers": [80]
+
+
+## Selected Release Notes
 
 ### 1.0.0
 
