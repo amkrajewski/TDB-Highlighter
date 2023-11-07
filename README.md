@@ -64,6 +64,10 @@ Similar to phases, species names can be arbitrarily set by users, but in this ca
 
 If you wish to highlight your species, please add them to your **local** phases list and avoid opening a pull request for this.
 
+### Function Names Not Recognized in Equations
+
+Most likely, your function name does not have the `#` at the end of its name, which is required for it to be recognized as a function. This is intentional, as otherwise, they would conflict _custom user-defined_ species names, which are not provided by default, but can be added by the user and some of them may rely on it.
+
 ### Line Lenght Limit
 
 Some software, like the very popular [Thermo-Calc](https://www.thermocalc.com), has a limit on the length of a line in the TDB file, which is 80 characters following the legacy of [Fortran standard](https://en.wikipedia.org/wiki/Fortran_95_language_features#Source_code_formatting). We do not enforce this limit in the syntax highlighting, as not all software has this limit (e.g. [pycalphad](https://pycalphad.org)).
