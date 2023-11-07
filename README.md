@@ -44,9 +44,18 @@ We have tested that it performs very well with a number of themes, including: **
 ***No known _errors_ at this time!*** However, in some cases listed below, the highlighting may not be perfect due to the arbitrary nature of the TDB files and the limitations of the approach.
 
 ### User-Defined Phases
-The phase highlighting is not perfect in a way that it will not cover all the cases since names are arbitrary and can be anything. They are currently (V1.0.0) covered by this regex (where `\\w*` can be interpreted as "any characters remaining"):
+The phase highlighting is not perfect in a way that it will never cover all the cases since names are arbitrary user choices and can be any string. Thus, without _interpreting_ the TDB file (as opposed to _lexing_ it like we do here), it is impossible to know what is a phase in every context. 
 
-    "\\b(ELECTRON_GAS|VACUUM|GAS|LIQUID|FCC\\w*|BCC\\w*|HCP\\w*|DHCP|CBCC\\w*|DOUBLE\\w*|DIA\\w*|DIAMOND\\w*|BCT\\w*|RHO\\w*|ORTHORHOMBIC\\w*|TETRAGONAL\\w*|LAVES\\w*|CEMENTITE\\w*|SIGMA\\w*|MU\\w*|LAMBDA\\w*|ETA\\w*|BETA\\w*|GRAPHITE\\w*|THETA\\w*|GAMMA\\w*|C14|C15|C36|ORT|AMORPHOUS\\w*|\\w*AMORPHOUS|\\w*ALPHA|\\w*PRIME|\\w*BETA|\\w*GAMMA|\\w*DELTA|\\w*EPSILON|\\w*ETA|\\w*MU|\\w*SIGMA|\\w*TAU|\\w*D019|\\w*D83|\\w*A\\d\\d)\\b"
+Thus, we rely on a list of **common phase name *patterns*** that are known to be used in the community. They are currently (as of V1.2.0) covered by this regex (where `\\w*` can be interpreted as "any characters remaining in word", `\\d` is any digit, and `|` is "or" operator):
+
+    "\\b(ELECTRON_GAS|VACUUM|GAS|LIQUID|IONIC_L\\w*|FCC\\w*|BCC\\w*|HCP\\w*|DHCP|CBCC\\w*|DELTA|DOUBLE\\w*|DIA\\w*|DIAMOND\\w*|BCT\\w*|RHO\\w*|ORTHORHOMBIC\\w*|TETRAGONAL\\w*|LAVES\\w*|CEMENTITE\\w*|SIGMA\\w*|MU\\w*|LAMBDA\\w*|ETA\\w*|BETA\\w*|GRAPHITE\\w*|THETA\\w*|GAMMA\\w*|C14|C15|C36|ORT|R_PHASE|AMORPHOUS\\w*|\\w*_AMORPHOUS|\\w*_FCC|\\w*_BCC|\\w*_HCP|\\w*_BCT|\\w*_ALPHA|\\w*_PRIME|\\w*_BETA|\\w*_GAMMA|\\w*_DELTA|\\w*_EPSILON|\\w*_ETA|\\w*MU|\\w*_SIGMA|\\w*_TAU|\\w*_D019|\\w*_D83|\\w*_A\\d|\\w*_A\\d\\d|\\w*_B\\d|\\w*_B\\d\\d|\\w*_C\\d|\\w*_C\\d\\d|\\w*_D\\d|\\w*_D\\d\\d|\\w*_E\\d|\\w*_E\\d\\d|\\w*_H\\d|\\w*_H\\d\\d|\\w*_L\\d|\\w*_L\\d\\d|\\w*_S\\d|\\w*_S\\d\\d)\\b"
+
+You will notice all compound-based names (both explicit `NACL` and anonymous `M23C6`) are not covered and this is by design, due to both practical and fundamental issues using such ambiguous names can introduce, even though they are very convenient and commonly used. At the same time, you can quickly adjust this by appending it explicitly with Strukturbericht designation, e.g. `NACL_B2` or `CR23C6_D84`, and everything will work as expected.
+
+
+If you believe something is missing, please open an issue in this repository where you secify the phase name you wish to recognize and we will try to add it. 
+
+If you wish to add something yourself, **unsolicited pull requests are very welcome**. To do so, adjust regexes in the `tdb.tmLanguage.json` file and open a pull request.
 
 if you want to add something to it, please do so in the `tdb.tmLanguage.json` file, edit the regex string above to add your case, and **please open a pull request** in this repository.
 
