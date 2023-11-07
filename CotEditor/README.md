@@ -16,4 +16,17 @@ Adding the TDB highlighter to CotEditor is easy too! Simply:
 
 > Note: Works very well with most themes. We recommended either *one of the 5 examples below*, as well as *Dendrobates Light*, *Dentrobates Dark*, *Printen*, *Resinifictrix*, and *Pulse*. Subpar results are produced with Mono, Kawazu, Lakritz, Classic, thus these are not recommended.
 
-### 
+### Anura (Default Light)
+<p align="center"><img src="assets/AnuraCot.png" alt="Example of TDB Highlighter in action" width="500"><p>
+
+### Anura Dark (Default Dark)
+<p align="center"><img src="assets/AnuraDarkCot.png" alt="Example of TDB Highlighter in action" width="500"><p>
+
+### Solarized Dark
+<p align="center"><img src="assets/SolarizedDarkCot.png" alt="Example of TDB Highlighter in action" width="500"><p>
+
+### Solarized Light
+<p align="center"><img src="assets/SolarizedLightCot.png" alt="Example of TDB Highlighter in action" width="500"><p>
+
+### Note
+<p align="center"><img src="assets/NoteCot.png" alt="Example of TDB Highlighter in action" width="500"><p>
