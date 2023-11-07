@@ -25,11 +25,11 @@ This VS Code Language Extension, developed by [Adam M. Krajewski](https://github
 
 - A number of **TDB syntax** keywords are specifically highlighted in neutral colors matching their functions to make them stand out in case of typos.
 
-***Giving raise to the following neat-looking TDB header and function definitions:***
+***Together, they yield the following neat-looking TDB header and function definitions:***
 
 <p align="center"><img src="assets/Fig1.png" alt="Example of TDB Highlighter in action" width="480"><p>
 
-***and main body with thermodynamic model parameters:***
+***and the main body of thermodynamic model parameters:***
 
 <p align="center"><img src="assets/Fig2.png" alt="Example of TDB Highlighter in action" width="500"><p>
 
@@ -37,11 +37,11 @@ This VS Code Language Extension, developed by [Adam M. Krajewski](https://github
 
 <p align="center"><img src="assets/Fig3.png" alt="Example of TDB Highlighter in action" width="470"><p>
 
-We have tested that it works very well with a number of themes, including: **(VSCode Default) Light Modern, Quiet Light, Solarized Light, Monokai, Monokai Dimmed, Synthwave '84, and (VSCode Default) Dark Modern**. You can see some of the [example renderings below](#example-renderings). If you find that TDB Highlighter does not work well with your theme, please open an issue in this repository and we will try to fix it.
+We have tested that it performs very well with a number of themes, including: **(VSCode Default) Light Modern, Quiet Light, Solarized Light, Monokai, Monokai Dimmed, Synthwave '84, and (VSCode Default) Dark Modern**. You can see some of the [example renderings below](#example-renderings). If you find that TDB Highlighter does not work well with your theme, please open an issue in this repository and we will try to fix it.
 
 ## FAQ
 
-***No known _errors_ at this time!*** But in some cases listed below, the highlighting may not be perfect due to the arbitrary nature of the TDB files.
+***No known _errors_ at this time!*** However, in some cases listed below, the highlighting may not be perfect due to the arbitrary nature of the TDB files and the limitations of the approach.
 
 ### User-Defined Phases
 The phase highlighting is not perfect in a way that it will not cover all the cases since names are arbitrary and can be anything. They are currently (V1.0.0) covered by this regex (where `\\w*` can be interpreted as "any characters remaining"):
