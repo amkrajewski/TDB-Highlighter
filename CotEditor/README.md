@@ -1,5 +1,7 @@
 # TDB Highlighter For CotEditor
 
+[**Introduction**](#introduction) | [**Installation**](#installation) | [**Examples**](#examples)
+
 ## Introduction
 The CotEditor is a _very_ lightweight _native_ editor for macOS written in Swift, which I use to quickly look-up and edit files with syntax highlighting but without the overhead of a full IDE. 
 
