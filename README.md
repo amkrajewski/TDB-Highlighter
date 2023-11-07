@@ -37,7 +37,7 @@ This VS Code Language Extension, developed by [Adam M. Krajewski](https://github
 
 <p align="center"><img src="assets/Fig3.png" alt="Example of TDB Highlighter in action" width="470"><p>
 
-We have tested that it works very well with a number of themes, including: **(VSCode Default) Light Modern**, 
+We have tested that it works very well with a number of themes, including: **(VSCode Default) Light Modern, Quiet Light, Solarized Light, Monokai, Monokai Dimmed, Synthwave '84, and (VSCode Default) Dark Modern**. You can see some of the [example renderings below](#example-renderings). If you find that TDB Highlighter does not work well with your theme, please open an issue in this repository and we will try to fix it.
 
 ## FAQ
 
@@ -90,8 +90,12 @@ However, if you wish to enforce this limit, you can quickly do so by adding the 
 ## Selected Release Notes
 
 ### 1.0.0
+- The initial release of TDB Highlighter.
 
-The initial release of TDB Highlighter.
+### 1.0.0 - 1.2.1
+- Several user-requested features were added and some small bugs have been fixed.
 
+### CotEditor
+- TDB Highlighter is now available for [**CotEditor**](https://coteditor.com) as well! For details, please see [this TDB Highlighter release](https://github.com/amkrajewski/tdb-highlighter/releases/tag/CotEditor).
 
 ***Enjoy!***
