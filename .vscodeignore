@@ -4,3 +4,4 @@ node_modules
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
+CotEditor
