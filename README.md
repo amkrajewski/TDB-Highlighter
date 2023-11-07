@@ -62,6 +62,30 @@ However, if you wish to enforce this limit, you can quickly do so by adding the 
 
     "editor.rulers": [80]
 
+## Example Renderings
+
+### Light Modern (VSCode Default Light)
+
+<p align="center"><img src="assets/LightModern.png" alt="Example of TDB Highlighter in action" width="450"><p>
+
+### Quiet Light
+<p align="center"><img src="assets/QuietLight.png" alt="Example of TDB Highlighter in action" width="450"><p>
+
+### Solarized Light
+<p align="center"><img src="assets/SolarizedLight.png" alt="Example of TDB Highlighter in action" width="450"><p>
+
+### Monokai
+<p align="center"><img src="assets/Monokai.png" alt="Example of TDB Highlighter in action" width="450"><p>
+
+### Monokai Dimmed
+<p align="center"><img src="assets/MonokaiDimmed.png" alt="Example of TDB Highlighter in action" width="450"><p>
+
+### Synthwave '84
+<p align="center"><img src="assets/Synthwave84.png" alt="Example of TDB Highlighter in action" width="450"><p>
+
+### Dark Modern (VSCode Default Dark)
+<p align="center"><img src="assets/DarkModern.png" alt="Example of TDB Highlighter in action" width="450"><p>
+
 
 ## Selected Release Notes
 
