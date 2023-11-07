@@ -1,0 +1,84 @@
+kind: "code"
+extensions:
+- keyString: "tdb"
+- keyString: "TDB"
+
+metadata:
+  version: "1.2.1"
+  author: "Adam M Krajewski"
+  license: "MIT"
+  description: "ThermodynamicDataBase (TDB) highlighter for CotEditor"
+
+filenames: []
+interpreters: []
+
+variables:
+- beginString: "\\b(ELEMENT|SPECIES|MAGNETIC)\\b"
+  regularExpression: true
+- beginString: "\\b(PHASE|CONSTITUENT|CONST)\\b"
+  regularExpression: true
+
+commands: 
+- beginString: "\\b(PARAMETER\\s+\\w+|PARAM\\s+\\w+|PARA\\s+\\w+|PAR\\s+\\w+)\\b"
+  regularExpression: true
+
+numbers: 
+- beginString: "[A-Z][A-Z0-9]*#"
+  regularExpression: true
+- beginString: "\\b(FUNCTION\\s+\\w+|FUNCT\\s+\\w+)\\b"
+  regularExpression: true
+
+values: 
+- beginString: "T\\*\\*\\(-\\d+"
+  regularExpression: true
+- beginString: "T\\*\\*\\d+"
+  regularExpression: true
+- beginString: "\\bT\\b"
+  regularExpression: true
+- beginString: "\\b(LN|LOG|EXP)\\b"
+  regularExpression: true
+
+types:
+- beginString: "\\b(ELECTRON_GAS|VACUUM|GAS|LIQUID|IONIC_L\\w*|FCC\\w*|BCC\\w*|HCP\\w*|DHCP|CBCC\\w*|DELTA|DOUBLE\\w*|DIA\\w*|DIAMOND\\w*|BCT\\w*|RHO\\w*|ORTHORHOMBIC\\w*|TETRAGONAL\\w*|LAVES\\w*|CEMENTITE\\w*|SIGMA\\w*|MU\\w*|LAMBDA\\w*|ETA\\w*|BETA\\w*|GRAPHITE\\w*|THETA\\w*|GAMMA\\w*|C14|C15|C36|ORT|R_PHASE|AMORPHOUS\\w*|\\w*_AMORPHOUS|\\w*_FCC|\\w*_BCC|\\w*_HCP|\\w*_BCT|\\w*_ALPHA|\\w*_PRIME|\\w*_BETA|\\w*_GAMMA|\\w*_DELTA|\\w*_EPSILON|\\w*_ETA|\\w*MU|\\w*_SIGMA|\\w*_TAU|\\w*_D019|\\w*_D83|\\w*_A\\d\\d)\\b"
+  regularExpression: true
+  description: "phases"
+
+characters: 
+- beginString: "\\bP\\b(?=\\*|\\+|-)"
+  regularExpression: true
+- beginString: "P\\*\\*\\(-\\d+"
+  regularExpression: true
+- beginString: "P\\*\\*\\d+"
+  regularExpression: true
+- beginString: "\\b(VA|H|HE|LI|BE|B|C|O|F|NE|NA|MG|AL|SI|P|S|CL|AR|K|CA|SC|TI|V|CR|MN|FE|CO|NI|CU|ZN|GA|GE|AS|SE|BR|KR|RB|SR|ZR|Y|NB|MO|RU|RH|PD|AG|CD|IN|SN|SB|TE|I|XE|CS|BA|LA|CE|PR|ND|PM|SM|EU|GD|TB|DY|HO|ER|TM|YB|LU|HF|TA|W|RE|OS|IR|PT|AU|HG|TL|PB|BI|TH|PA|U|NP|PU|AM|CM|BK|CF|ES|FM|MD|NO|LR|RF|DB|SG|BH|HS|MT|DS|RG|CN|NH|FL|MC|LV|TS|OG)\\b"
+  regularExpression: true
+  description: "element"
+- beginString: "\\bTC\\b(?!\\()"
+  regularExpression: true
+- beginString: "\\bN\\b(?!\\s*(\\!|REF))"
+  regularExpression: true
+- beginString: "\\bY\\b(?!\\s*(\\!|REF))"
+  regularExpression: true
+
+attributes:
+- beginString: "\\bDEFINE_SYSTEM_DEFAULT\\s+\\w+|DEFAULT_COMMAND\\s+\\w+|DEFAULT-COM\\s+\\w+" 
+  regularExpression: true
+- beginString: "\\bGES\\s+\\w+|SEQ\\s+\\w+|RND#\\s+\\w+|GES\\s+\\w+|POLY3\\s+\\w+|TDB\\s+\\w+|GES\\s+.|SEQ\\s+.|RND#\\s+.|GES\\s+.|POLY3\\s+.|TDB\\s+."
+  regularExpression: true
+- beginString: "\\bTYPE_DEFINITION\\s+.|TYPE-DEFINITION\\s+.|TYPE_DEF\\s+.|TYPE-DEF\\s+.|LIST_OF_REFERENCES|NUMBER|SOURCE"
+  regularExpression: true
+
+comments:
+- beginString: "\\bREF\\w+\\b"
+  regularExpression: true
+- beginString: "!"
+  regularExpression: true
+- beginString: "\\$.*"
+  regularExpression: true
+- beginString: "\\bN\\b(?=\\s*(\\!|REF))"
+  regularExpression: true
+
+keywords:
+- beginString: "\\b[0-9]+(\\.[0-9]*)?(e[-+]?[0-9]*)?(_[a-z0-9_]+)?\\b(?!\\))"
+  regularExpression: true
+  ignoreCase: true
