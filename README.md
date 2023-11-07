@@ -5,7 +5,7 @@
 [![Installs](https://vsmarketplacebadges.dev/installs-short/amkrajewski.tdb-highlighter.png?color=blue&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=amkrajewski.tdb-highlighter)
 [![Rating](https://vsmarketplacebadges.dev/rating-star/amkrajewski.tdb-highlighter.png?color=blue&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=amkrajewski.tdb-highlighter)
 
-
+| [**Features**](#features) | [**FAQ**](#faq) | [**Examples for Different Themes**](#example-renderings) | [**GitHub Repository**](https://github.com/amkrajewski/TDB-Highlighter) |
 
 _You didn't know you can't do CALPHAD without it._
 
