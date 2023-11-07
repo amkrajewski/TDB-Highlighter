@@ -57,11 +57,12 @@ If you believe something is missing, please open an issue in this repository whe
 
 If you wish to add something yourself, **unsolicited pull requests are very welcome**. To do so, adjust regexes in the `tdb.tmLanguage.json` file and open a pull request.
 
-if you want to add something to it, please do so in the `tdb.tmLanguage.json` file, edit the regex string above to add your case, and **please open a pull request** in this repository.
 
 ### Names of Species
 
-Similar to phases, species names can be arbitrarily set by users, but in this case, the number is so large that it is not feasible to cover them all _a priori_. If you wish to highlight your species, please add them to your **local** phases list.
+Similar to phases, species names can be arbitrarily set by users, but in this case, the number is so large that it is not feasible to cover even the common ones, as even the same ion can be found written differently across research groups; e.g., `Fe3+`, `Fe+3`, `3+Fe`, `3Fe`, etc. 
+
+If you wish to highlight your species, please add them to your **local** phases list and avoid opening a pull request for this.
 
 ### Line Lenght Limit
 
