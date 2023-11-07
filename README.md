@@ -100,16 +100,16 @@ However, if you wish to enforce this limit, you can quickly do so by adding the 
 ### Dark Modern (VSCode Default Dark)
 <p align="center"><img src="assets/DarkModern.png" alt="Example of TDB Highlighter in action" width="450"><p>
 
-### Modifying the Thme to Your Liking
-In VS Code, language extensions are meant to use color theme chosen by the user and thus are, by design, prohibited from making modifications to them. Thus, TDB Highlighter has to work with existing, so called _tokens_ that are provided by the theme. In some cases, like in [the Dark Modern (VSCode Default Dark)] theme, some critical tokens are explicitly defined to be the same and there is little we can do about it.
+### Modifying the Theme to Your Liking
+In VS Code, language extensions are meant to use a color theme chosen by the user and thus are, by design, prohibited from making modifications to them. Therefore, TDB Highlighter has to work with existing so-called _tokens_ that are provided by the theme. In some cases, like in [the Dark Modern (VSCode Default Dark)] theme, some critical tokens are explicitly defined to be the same, and there is little we can do about it.
 
-Fortunatelly, as the user, you have full control over theme customizations! You can for instance add the following to your `settings.json` file to make the phase tokens (`markup.heading`) bold gold (`#D0B344`) color in the `Default Dark Modern` theme:
+Fortunately, as the user, you have complete control over theme customizations! You can, for instance, add the following to your `settings.json` file to make the phase tokens (`markup.heading`) bold gold (`#D0B344`) color in the `Default Dark Modern` theme:
 
     "editor.tokenColorCustomizations": {
         "[Default Dark Modern]": {"textMateRules": [{"scope": "markup.heading","settings": {"foreground": "#D0B344"}}]}
         },
 
-and you will get the following:
+And you will get the following:
 
 <p align="center"><img src="assets/DarkModernModified.png" alt="Example of TDB Highlighter in action" width="450"><p>
 
