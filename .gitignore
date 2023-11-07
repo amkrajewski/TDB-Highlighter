@@ -1,4 +1,4 @@
 node_modules
 *.vsix
 *.tdb
-.DS_Store
+**/.DS_Store
