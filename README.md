@@ -13,6 +13,8 @@ This VS Code Language Extension, developed by [Adam M. Krajewski](https://github
 
 **Most critically, if something is highlighted differently than you expect, you know something may be wrong with it :).** E.g., in `+1.95033E-07*T**3-.01798O876*T**2+78.5244752*T*LN(T)-722.59722*T+229382.886-93813648*T**(-1); 3290 Y` one of the numbers is not a number and will be red. Guess which one...? Likewise, that `LAVE_C36` phase you just typed will stand out.
 
+**Note**: Unsolicited feedback, feature requests, and pull requests are _happily_ accepted!
+
 ## Features
 
 - **Phases, species, elements** and other critical elements of the database, are formatted with highly visible fonts and colors, speeding up the process of navigating, reading, and editing the files tremendously.
