@@ -53,6 +53,11 @@ You may not know, but GitHub repositories can be run in developer mode with the 
 
 The whole process should not take more than one minute and you will be ready to highlight your `TDB`s. If you want to try it out on your own files, you can just drag and drop them into the "Explorer" tab (left edge, first from the top) and it will be persisted in your browser (locally!) until you reset your browser cache or restart your computer. If you want to persist things, you can use local VS Code or set up your own GitHub repository and Commit&Push your progress under "Source Control" tab.
 
+### CotEditor
+
+Installing `TDB Highlighter` in [CotEditor](https://coteditor.com), which happens to be my favorite text editor on Mac, is also very straightforward. Plese follow [these dedicated instructions](CotEditor/README.md).
+
+
 ## FAQ
 
 ***No known _errors_ at this time!*** However, in some cases listed below, the highlighting may not be perfect due to the arbitrary nature of the TDB files and the limitations of the approach.
