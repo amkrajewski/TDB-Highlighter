@@ -41,6 +41,18 @@ This VS Code Language Extension, developed by [Adam M. Krajewski](https://github
 
 We have tested that it performs very well with a number of themes, including: **(VSCode Default) Light Modern, Quiet Light, Solarized Light, Monokai, Monokai Dimmed, Synthwave '84, and (VSCode Default) Dark Modern**. You can see some of the [example renderings below](#example-renderings). If you find that TDB Highlighter does not work well with your theme, please open an issue in this repository and we will try to fix it.
 
+## Install
+
+### VS Code
+
+Installing `TDB Highlighter` in VS Code is trivial, as it is released through the official Microsoft Marketplace and the only thing you need to do is to go to "Extensions" tab (left edge, center) by clicking its icon (4 squares, one detached) and press "Install".
+
+### GitHub Dev Mode (github.dev)
+
+You may not know, but GitHub repositories can be run in developer mode with the same graphical interface as VS Code. You can give it a try by going to any repository with `TDB` files (like [this one for high-entropy alloys](https://github.com/ShuangLin212/Al-Co-Cr-Mo-Ti-V-thermodynamic-database)) and simply pressing the period key (a.k.a dot or `.`) on your keyboard. `TDB Highlighter` was designed to be fully compatible with that interface and you can install  just like in the [VS Code instructions](#vs-code) above. 
+
+The whole process should not take more than one minute and you will be ready to highlight your `TDB`s. If you want to try it out on your own files, you can just drag and drop them into the "Explorer" tab (left edge, first from the top) and it will be persisted in your browser (locally!) until you reset your browser cache or restart your computer. If you want to persist things, you can use local VS Code or set up your own GitHub repository and Commit&Push your progress under "Source Control" tab.
+
 ## FAQ
 
 ***No known _errors_ at this time!*** However, in some cases listed below, the highlighting may not be perfect due to the arbitrary nature of the TDB files and the limitations of the approach.
