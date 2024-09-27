@@ -5,7 +5,8 @@
 [![Installs](https://vsmarketplacebadges.dev/installs-short/amkrajewski.tdb-highlighter.png?color=blue&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=amkrajewski.tdb-highlighter)
 [![Rating](https://vsmarketplacebadges.dev/rating-star/amkrajewski.tdb-highlighter.png?color=blue&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=amkrajewski.tdb-highlighter)
 
-| [**Features**](#features) | [**FAQ**](#faq) | [**Examples for Different Themes**](#example-renderings) | [**GitHub Repository**](https://github.com/amkrajewski/TDB-Highlighter) |
+| [**Features**](#features) | [**FAQ**](#faq) | [**Examples for Different Themes**](#example-renderings) | [**GitHub Repository**](https://github.com/amkrajewski/TDB-Highlighter) | 
+[**In-Browser Use w. GitHub Dev**](#github-dev-mode-githubdev) | [**CotEditor Install**](CotEditor/README.md) | [**JetBrains Install**](#jetbrains--intellij--pycharm) | 
 
 _You didn't know you can't do CALPHAD without it._
 
