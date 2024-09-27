@@ -57,6 +57,12 @@ The whole process should not take more than one minute and you will be ready to 
 
 Installing `TDB Highlighter` in [CotEditor](https://coteditor.com), which happens to be my favorite text editor on Mac, is also very straightforward. Plese follow [these dedicated instructions](CotEditor/README.md).
 
+### JetBrains / IntelliJ / PyCharm
+
+The source code of `TDB Highlighter` is fully compatible with IntelliJ, PyCharm, and other JetBrains products through their TextMate Bundles *default* extension, so, like with CotEditor, there is no need to install any plugins. 
+
+Simply obtain our source code by either (a) cloning the repository, (b) downloading it as ZIP by going to `Code<> > Local > Download ZIP` and unpacking, or (c) downloading it as ZIP from one of the releases and unpacking. Make sure to place files in a location you will not delete in the future (like Documents rather than Downloads). Once you are ready, in your JetBrains product, go to `Settings.. > Editor > TextMate Bundles` and click on the plus button (`+`) to add a new bundle, then navigate to the `TDB Highlighter` source code root (you should see `package.json` but grayed-out), and, finally, click `Open`. Done! You should now have syntax highlighting of all of your `.tdb` and `.TDB` files.
+
 
 ## FAQ
 
